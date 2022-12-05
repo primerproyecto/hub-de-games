@@ -1,0 +1,397 @@
+/* RESET JOSH COMEAU */
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+
+
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --spacing: 4px;
+
+  --lightenes : 100%;
+  --lightness-50: 50%;
+
+  --border-radius: 4px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+main {
+  flex:1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: calc(var(--spacing)*2);
+}
+body {
+  color: hsl(var(--hue) var(--saturation) var(--lightenes));
+  background-color: hsl(var(--hue) var(--saturation) var(--lightness-50));
+}
+#header > nav {
+display: flex;
+align-items: center;
+}
+
+#header > nav a{
+  padding: 1rem;
+  }
+
+#header > nav a:first-child {
+  margin-right: auto;
+}
+
+a {
+  font-weight: 500;
+  color: currentColor;
+  text-decoration: inherit;
+  font-size: 1.2rem;
+}
+a:hover {
+  color: currentColor;
+}
+
+footer {
+  padding: 1rem;
+  text-align: center;
+}
+section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+section#juegos {
+  width: 100%;
+  padding: calc(var(--spacing)*2);
+}
+section#juegos figure {
+  border: 2px solid;
+  padding: calc(var(--spacing)*2);
+  margin-bottom: calc(var(--spacing)*2);
+  border-color: hsl(var(--hue) var(--saturation) var(--lightenes));
+}
+
+#formHomeContent {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing)*2)
+}
+
+input {
+  padding: calc(var(--spacing)*3);
+  font-size: 1.5rem;
+  border-radius: var(--border-radius);
+}
+button {
+  padding: calc(var(--spacing)*3);
+  border-radius: var(--border-radius);
+  font-size: 1.5rem;
+
+}
+
+
+/*
+  AHORCADO
+*/
+#ahorcado-wrapper,
+#tresEnRaya-wrapper,
+#encuentraParejas-wrapper {
+  border: 4px solid black;
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
+#ahorcado-wrapper > div,
+#tresEnRaya-wrapper > div{
+  background-color: black;
+  position: absolute;
+}
+#ahorcado__base {
+  position: absolute;
+  left:0;
+  right: 0;
+  bottom:0;
+  height: calc(var(--spacing)*3);
+  width: 50%;
+}
+#ahorcado__mastil {
+  position: absolute;
+  bottom:calc(var(--spacing)*3);
+  width: calc(var(--spacing)*3);
+  left:20%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 74%;
+}
+#ahorcado__cruz {
+  position: absolute;
+  left:15%;
+  top:20%;
+  height: calc(var(--spacing)*3);
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#ahorcado__soga {
+  position: absolute;
+  width: calc(var(--spacing)*3);
+  top: 20%;
+  left: 60%;
+  height: calc(var(--spacing)*10);
+}
+#ahorcado__cabeza {
+  position: absolute;
+  width: calc(var(--spacing)*10);
+  top: 30%;
+  left: 55%;
+  height: calc(var(--spacing)*10);
+  border-radius: 50%;
+}
+#ahorcado__tronco {
+  width: calc(var(--spacing)*3);
+  top: 40%;
+  left: 60%;
+  height: calc(var(--spacing)*20);
+}
+#ahorcado__brazoIzq {
+  width: calc(var(--spacing)*3);
+  top: 40%;
+  left: 50%;
+  height: calc(var(--spacing)*15);
+  transform: rotate(65deg);
+}
+#ahorcado__brazoDer{
+  width: calc(var(--spacing)*3);
+  top: 40%;
+  left: 68%;
+  height: calc(var(--spacing)*15);
+  transform: rotate(125deg);
+}
+#ahorcado__piernaIzq {
+  width: calc(var(--spacing)*3);
+  top: 60%;
+  left: 55%;
+  height: calc(var(--spacing)*15);
+  transform: rotate(37deg);
+}
+#ahorcado__piernaDer{
+  width: calc(var(--spacing)*3);
+  top: 60%;
+  left: 65%;
+  height: calc(var(--spacing)*15);
+  transform: rotate(150deg);
+}
+
+
+/*
+  AHORCADO
+*/
+#tresEnRaya-wrapper {
+
+}
+#tresEnRaya1__barra {
+  width: calc(var(--spacing)*2);
+  height:80% ;
+  left: 35%;
+  top: 10%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+#tresEnRaya2__barra {
+  width: calc(var(--spacing)*2);
+  height:80% ;
+  right: 35%;
+  top: 10%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+#tresEnRaya3__barra {
+  width: 80%;
+  height:calc(var(--spacing)*2);;
+  left: 0;
+  right:0;
+  top: 35%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#tresEnRaya4_barra {
+  width: 80%;
+  height:calc(var(--spacing)*2);
+  left: 0;
+  right:0;
+  bottom: 35%;
+  margin-left: auto;
+  margin-right: auto;
+}
+div#tresEnRaya4_circulo {
+  width: 17%;
+  height: 17%;
+  top: 13%;
+  left: 13%;
+  border-radius: 50%;
+  background-color: transparent;
+  border: calc(var(--spacing)*2) solid currentColor;
+}
+div#tresEnRaya4_cruz {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: transparent ;
+}
+#tresEnRaya4_cruz::before {
+  margin-top:auto;
+  margin-left: auto;
+  position: absolute;
+  width: 60px;
+  height: calc(var(--spacing)*2);
+  content: '';
+  background-color: currentColor;
+  top: 48%;
+  left: 40%;
+  transform: rotate(45deg);
+}
+#tresEnRaya4_cruz::after {
+  margin-top:auto;
+  margin-left: auto;
+  position: absolute;
+  width: 60px;
+  height: calc(var(--spacing)*2);
+  content: '';
+  background-color: currentColor;
+  top: 48%;
+  left: 40%;
+  transform: rotate(140deg);
+}
+
+/* ENCUENTRA PAREJAS */
+
+
+#encuentraParejas-wrapper > div {
+  position: absolute;
+  width: calc(var(--spacing)*10);
+  height: calc(var(--spacing)*10);
+  border-radius: 4px;
+  background-color: black;
+}
+#encuentraParejas-wrapper > div:nth-child(1){
+  left: 12%;
+  top: 13%;
+}
+#encuentraParejas-wrapper > div:nth-child(2){
+  left: 12%;
+  top: 33%;
+}
+#encuentraParejas-wrapper > div:nth-child(3){
+  left: 12%;
+  top: 53%;
+}
+#encuentraParejas-wrapper > div:nth-child(4){
+  left: 12%;
+  top: 73%;
+}
+#encuentraParejas-wrapper > div:nth-child(5){
+  left: 32%;
+  top: 13%;
+}
+#encuentraParejas-wrapper > div:nth-child(6){
+  left: 32%;
+  top: 33%;
+  outline: 4px solid currentColor;
+  background-color: transparent;
+}
+#encuentraParejas-wrapper > div:nth-child(7){
+  left: 32%;
+  top: 53%;
+}
+#encuentraParejas-wrapper > div:nth-child(8){
+  left: 32%;
+  top: 73%;
+}
+#encuentraParejas-wrapper > div:nth-child(9){
+  left: 52%;
+  top: 13%;
+  outline: 4px solid currentColor;
+  background-color: transparent;
+}
+#encuentraParejas-wrapper > div:nth-child(10){
+  left: 52%;
+  top: 33%;
+}
+#encuentraParejas-wrapper > div:nth-child(11){
+  left: 52%;
+  top: 53%;
+}
+#encuentraParejas-wrapper > div:nth-child(12){
+  left: 52%;
+  top: 73%;
+}
+#encuentraParejas-wrapper > div:nth-child(13){
+  left: 72%;
+  top: 13%;
+}
+#encuentraParejas-wrapper > div:nth-child(14){
+  left: 72%;
+  top: 33%;
+}
+#encuentraParejas-wrapper > div:nth-child(15){
+  left:72%;
+  top: 53%;
+}
+#encuentraParejas-wrapper > div:nth-child(16){
+  left: 72%;
+  top: 73%;
+}
