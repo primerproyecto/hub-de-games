@@ -1,3 +1,4 @@
+import './ahorcado.css'
 export const template = () => `
 
 <section class="ahorcado">

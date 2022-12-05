@@ -60,8 +60,8 @@ p, h1, h2, h3, h4, h5, h6 {
 
   --spacing: 4px;
 
-  --lightenes : 100%;
-  --lightness-50: 50%;
+  --lightenes : 90%;
+  --lightness-50: 10%;
 
   --border-radius: 4px;
 }
@@ -150,90 +150,15 @@ button {
 #ahorcado-wrapper,
 #tresEnRaya-wrapper,
 #encuentraParejas-wrapper {
-  border: 4px solid black;
+  border: 4px solid hsl(var(--hue) var(--saturation) var(--lightenes));
   width: 300px;
   height: 300px;
   position: relative;
 }
 #ahorcado-wrapper > div,
 #tresEnRaya-wrapper > div{
-  background-color: black;
+  background-color: hsl(var(--hue) var(--saturation) var(--lightenes));
   position: absolute;
-}
-#ahorcado__base {
-  position: absolute;
-  left:0;
-  right: 0;
-  bottom:0;
-  height: calc(var(--spacing)*3);
-  width: 50%;
-}
-#ahorcado__mastil {
-  position: absolute;
-  bottom:calc(var(--spacing)*3);
-  width: calc(var(--spacing)*3);
-  left:20%;
-  margin-left: auto;
-  margin-right: auto;
-  height: 74%;
-}
-#ahorcado__cruz {
-  position: absolute;
-  left:15%;
-  top:20%;
-  height: calc(var(--spacing)*3);
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-}
-#ahorcado__soga {
-  position: absolute;
-  width: calc(var(--spacing)*3);
-  top: 20%;
-  left: 60%;
-  height: calc(var(--spacing)*10);
-}
-#ahorcado__cabeza {
-  position: absolute;
-  width: calc(var(--spacing)*10);
-  top: 30%;
-  left: 55%;
-  height: calc(var(--spacing)*10);
-  border-radius: 50%;
-}
-#ahorcado__tronco {
-  width: calc(var(--spacing)*3);
-  top: 40%;
-  left: 60%;
-  height: calc(var(--spacing)*20);
-}
-#ahorcado__brazoIzq {
-  width: calc(var(--spacing)*3);
-  top: 40%;
-  left: 50%;
-  height: calc(var(--spacing)*15);
-  transform: rotate(65deg);
-}
-#ahorcado__brazoDer{
-  width: calc(var(--spacing)*3);
-  top: 40%;
-  left: 68%;
-  height: calc(var(--spacing)*15);
-  transform: rotate(125deg);
-}
-#ahorcado__piernaIzq {
-  width: calc(var(--spacing)*3);
-  top: 60%;
-  left: 55%;
-  height: calc(var(--spacing)*15);
-  transform: rotate(37deg);
-}
-#ahorcado__piernaDer{
-  width: calc(var(--spacing)*3);
-  top: 60%;
-  left: 65%;
-  height: calc(var(--spacing)*15);
-  transform: rotate(150deg);
 }
 
 
@@ -325,7 +250,7 @@ div#tresEnRaya4_cruz {
   width: calc(var(--spacing)*10);
   height: calc(var(--spacing)*10);
   border-radius: 4px;
-  background-color: black;
+  background-color: hsl(var(--hue) var(--saturation) var(--lightenes));
 }
 #encuentraParejas-wrapper > div:nth-child(1){
   left: 12%;
@@ -394,4 +319,10 @@ div#tresEnRaya4_cruz {
 #encuentraParejas-wrapper > div:nth-child(16){
   left: 72%;
   top: 73%;
+}
+
+#pregunta {
+  font-size: 1.5rem;
+  line-height: 1.1;
+  margin-bottom: 2rem;
 }

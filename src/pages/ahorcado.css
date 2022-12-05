@@ -1,0 +1,76 @@
+#ahorcado__base {
+    position: absolute;
+    left:0;
+    right: 0;
+    bottom:0;
+    height: calc(var(--spacing)*3);
+    width: 50%;
+  }
+  #ahorcado__mastil {
+    position: absolute;
+    bottom:calc(var(--spacing)*3);
+    width: calc(var(--spacing)*3);
+    left:20%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 74%;
+  }
+  #ahorcado__cruz {
+    position: absolute;
+    left:15%;
+    top:20%;
+    height: calc(var(--spacing)*3);
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #ahorcado__soga {
+    position: absolute;
+    width: calc(var(--spacing)*3);
+    top: 20%;
+    left: 60%;
+    height: calc(var(--spacing)*10);
+  }
+  #ahorcado__cabeza {
+    position: absolute;
+    width: calc(var(--spacing)*10);
+    top: 30%;
+    left: 55%;
+    height: calc(var(--spacing)*10);
+    border-radius: 50%;
+  }
+  #ahorcado__tronco {
+    width: calc(var(--spacing)*3);
+    top: 40%;
+    left: 60%;
+    height: calc(var(--spacing)*20);
+  }
+  #ahorcado__brazoIzq {
+    width: calc(var(--spacing)*3);
+    top: 40%;
+    left: 50%;
+    height: calc(var(--spacing)*15);
+    transform: rotate(65deg);
+  }
+  #ahorcado__brazoDer{
+    width: calc(var(--spacing)*3);
+    top: 40%;
+    left: 68%;
+    height: calc(var(--spacing)*15);
+    transform: rotate(125deg);
+  }
+  #ahorcado__piernaIzq {
+    width: calc(var(--spacing)*3);
+    top: 60%;
+    left: 55%;
+    height: calc(var(--spacing)*15);
+    transform: rotate(37deg);
+  }
+  #ahorcado__piernaDer{
+    width: calc(var(--spacing)*3);
+    top: 60%;
+    left: 65%;
+    height: calc(var(--spacing)*15);
+    transform: rotate(150deg);
+  }
+  
