@@ -82,6 +82,11 @@ body {
   color: hsl(var(--hue) var(--saturation) var(--lightenes));
   background-color: hsl(var(--hue) var(--saturation) var(--lightness-50));
 }
+ul {
+  padding: 0;
+  margin:0;
+  list-style-type: none;
+}
 #header > nav {
 display: flex;
 align-items: center;
@@ -113,6 +118,7 @@ section {
   display: flex;
   flex-direction: column;
   width: 100%;
+  flex:1;
 }
 section#juegos {
   width: 100%;
@@ -140,20 +146,30 @@ button {
   padding: calc(var(--spacing)*3);
   border-radius: var(--border-radius);
   font-size: 1.5rem;
-
+  cursor: pointer;
 }
 
-
+/* a.enlaceJuego #ahorcado-wrapper,
+a.enlaceJuego #tresEnRaya-wrapper,
+a.enlaceJuego #encuentraParejas-wrapper,
+a.enlaceJuego #preguntas-wrapper,
+a.enlaceJuego #wakatopo-wrapper,
+a.enlaceJuego #pokemon-wrapper {
+  min-height: 26rem;
+} */
 /*
   AHORCADO
 */
 #ahorcado-wrapper,
 #tresEnRaya-wrapper,
-#encuentraParejas-wrapper {
+#encuentraParejas-wrapper,
+#preguntas-wrapper,
+#wakatopo-wrapper,
+#pokemon-wrapper {
   border: 4px solid hsl(var(--hue) var(--saturation) var(--lightenes));
-  width: 300px;
-  height: 300px;
   position: relative;
+  display: flex;
+  flex: 1;;
 }
 #ahorcado-wrapper > div,
 #tresEnRaya-wrapper > div{
@@ -212,9 +228,9 @@ div#tresEnRaya4_circulo {
   border: calc(var(--spacing)*2) solid currentColor;
 }
 div#tresEnRaya4_cruz {
-  position: relative;
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  top: 48%;
+  left: 40%;
   background-color: transparent ;
 }
 #tresEnRaya4_cruz::before {
@@ -325,4 +341,264 @@ div#tresEnRaya4_cruz {
   font-size: 1.5rem;
   line-height: 1.1;
   margin-bottom: 2rem;
+}
+#respuestas li{
+  margin: 1.1rem;
+}
+
+.preguntaCierre div:nth-child(1) {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 14px solid;
+  border-top-color: currentcolor;
+  border-bottom-color: hsl(var(--hue) var(--saturation) var(--lightness-50));
+  border-left-color: hsl(var(--hue) var(--saturation) var(--lightness-50));
+  border-right-color: currentcolor;
+  transform: rotate(45deg);
+}
+.preguntaCierre div:nth-child(2) {
+  height: 50px;
+  width: 14px;
+  top: 130px;
+  right: 46px;
+  background-color: currentColor;
+  position: absolute;
+}
+.preguntaCierre div:nth-child(3) {
+  height: 14px;
+  width: 14px;
+  top: 190px;
+  right: 46px;
+  background-color: currentColor;
+  position: absolute;
+  border-radius: 50%;
+}
+.preguntaCierre:nth-child(2){
+  transform: rotate(180deg) translateX(-16px) translateY(23px);
+  position: relative;
+}
+.preguntaCierre:nth-child(1){
+  transform: translateX(260px) translateY(0px);
+  position: relative;
+}
+
+#pokemon-wrapper div:nth-child(1){
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 0px;
+  bottom:0px;
+  left: 0px;
+  right: 0px;
+  margin:auto;
+  border-radius: 50%;
+  background-image: linear-gradient(
+    180deg,
+    red 0%,
+    red 49%,
+    currentColor 50%
+
+  );
+}
+#pokemon-wrapper div:nth-child(2){
+  width: 200px;
+  height: 14px;
+  position: absolute;
+  inset:0;
+  margin:auto;
+  background-color: hsl(var(--hue) var(--saturation) var(--lightness-50)) ;
+}
+#pokemon-wrapper div:nth-child(3){
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  inset:0;
+  margin:auto;
+  border-radius: 50%;
+  border: 12px solid hsl(var(--hue) var(--saturation) var(--lightness-50)) ;
+  background-color: currentColor;
+}
+/*
+  WHAKA TOPO
+*/
+#gusano {
+  background-color: currentColor;
+  border-radius: 48% 52% 56% 44% / 91% 88% 12% 9%  ;
+  margin-right:auto;
+  margin-left:auto;
+  width: 15%;
+  height: 15%;
+  position: absolute;
+  color: currentColor;
+  top: 0%;
+  left: 0%;
+  transform: scale(1.3);
+}
+#gusano::after {
+  background-color: currentColor;
+  border-radius: 48% 52% 56% 44% / 91% 88% 12% 9%  ;
+  top: 0%;
+  left:3%;
+  margin-right:auto;
+  margin-left:auto;
+  position: absolute;
+  width: 25%;
+  height: 25%;
+  position: absolute;
+  background-color: currentColor;
+  content: '';
+  transform: rotate(306deg);
+}
+#gusano::before {
+  background-color: currentColor;
+  border-radius: 48% 52% 56% 44% / 91% 88% 12% 9%  ;
+  top: 0%;
+  right:3%;
+  margin-right:auto;
+  margin-left:auto;
+  position: absolute;
+  width: 25%;
+  height: 25%;
+  position: absolute;
+  background-color: currentColor;
+  content: '';
+  transform: rotate(45deg);
+ 
+}
+#gusano div:nth-child(1) {
+  background-color: hsl(var(--hue) var(--saturation) var(--lightness-50));
+  border-radius: 50%;
+  left: 20%;
+  top: 45%;
+  position: absolute;
+  width: 25%;
+  height: 25%;
+  pointer-events: none;
+}
+#gusano div:nth-child(1)::after {
+  background-color: hsl(var(--hue) var(--saturation) var(--lightness-50));
+  border-radius: 50%;
+  left: 20%;
+  top: 25%;
+  position: absolute;
+  width: 40%;
+  content: '';
+  height: 40%;
+  background-color: currentColor;
+}
+#gusano div:nth-child(2) {
+  background-color: hsl(var(--hue) var(--saturation) var(--lightness-50));
+  border-radius: 50%;
+  right: 20%;
+  top: 45%;
+  position: absolute;
+  width: 25%;
+  height: 25%;
+  pointer-events: none;
+}
+#gusano div:nth-child(2)::after {
+  background-color: hsl(var(--hue) var(--saturation) var(--lightness-50));
+  border-radius: 50%;
+  right: 20%;
+  top: 25%;
+  position: absolute;
+  width: 40%;
+  content: '';
+  height: 40%;
+  background-color: currentColor;
+}
+
+.circulos > .circulo {
+  position: absolute;
+  width:15%;
+  height: 15%;
+  background-color: currentColor !important;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.circulos > .circulo:has(#gusano) {
+  background-color: transparent;
+}
+.circulos > .circulo:nth-child(1) {
+  left: 5%;
+  top: 5%;
+}
+.circulos > .circulo:nth-child(2) {
+  left: 30%;
+  top: 5%;
+}
+.circulos > .circulo:nth-child(3) {
+  right: 30%;
+  top: 5%;
+}
+.circulos > .circulo:nth-child(4) {
+  right: 5%;
+  top: 5%;
+}
+
+.circulos > .circulo:nth-child(5) {
+  right: 5%;
+  top: 30%;
+}
+.circulos > .circulo:nth-child(5) {
+  left: 5%;
+  top: 30%;
+}
+.circulos > .circulo:nth-child(6) {
+  left: 30%;
+  top: 30%;
+}
+.circulos > .circulo:nth-child(7) {
+  right: 30%;
+  top: 30%;
+}
+.circulos > .circulo:nth-child(8) {
+  right: 5%;
+  top: 30%;
+}
+.circulos > .circulo:nth-child(9) {
+  left: 5%;
+  top: 55%;
+}
+.circulos > .circulo:nth-child(10) {
+  left: 30%;
+  top: 55%;
+}
+.circulos > .circulo:nth-child(11) {
+  right: 30%;
+  top: 55%;
+}
+.circulos > .circulo:nth-child(12) {
+  right: 5%;
+  top: 55%;
+}
+.circulos > .circulo:nth-child(13) {
+  left: 5%;
+  top: 80%;
+}
+.circulos > .circulo:nth-child(14) {
+  left: 30%;
+  top: 80%;
+}
+.circulos > .circulo:nth-child(15) {
+  right: 30%;
+  top: 80%;
+}
+.circulos > .circulo:nth-child(16) {
+  right: 5%;
+  top: 80%;
+}
+
+figure > div:first-child {
+  height: 300px;
+  width: 300px;
+}
+
+.pokemon-loading {
+  border: 3px solid red;
 }

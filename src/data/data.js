@@ -13,21 +13,21 @@ export const data = {
             link: "/pokeapi",
             image: "https://i.ytimg.com/vi/yd7_STihkZ4/maxresdefault.jpg",
             description: "Esta es la descripción",
-            plantilla: 'html3enRaya'
+            plantilla: '<div id="pokemon-wrapper"><div class="semiesfera top"></div><div class="raya"></div><div class="esfera"></div></div>'
         },
         {
-            title: "Encuentra parejas",
+            title: "Memory game",
             link: "/encuentraparejas",
             image: "https://i.ytimg.com/vi/CEdHqXeljg8/maxresdefault.jpg",
             description: "Esta es la descripción",
             plantilla: '<div id="encuentraParejas-wrapper"><div class="encuentraParejas__card"></div><div class="encuentraParejas__card"></div><div class="encuentraParejas__card"></div><div class="encuentraParejas__card"></div><div class="encuentraParejas__card"></div><div class="encuentraParejas__card"></div><div class="encuentraParejas__card"></div><div class="encuentraParejas__card"></div><div class="encuentraParejas__card"></div><div class="encuentraParejas__card"></div><div class="encuentraParejas__card"></div><div class="encuentraParejas__card"></div><div class="encuentraParejas__card"></div> <div class="encuentraParejas__card"></div><div class="encuentraParejas__card"></div><div class="encuentraParejas__card"></div></div>'
         },
         {
-            title: "Fake Api",
-            link: "/fakeapi",
+            title: "Whaka topo",
+            link: "/whakatopo",
             image: "https://i.ytimg.com/vi/PGOPAenfLaU/maxresdefault.jpg",
             description: "Esta es la descripción",
-            plantilla: 'html3enRaya'
+            plantilla: '<div id="wakatopo-wrapper"><div class="circulos"><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div></div><div id="gusano"><div></div><div></div></div></div>'
         },
         {
             title: "Ahorcado",
@@ -41,7 +41,7 @@ export const data = {
             link: "/preguntas",
             image: "https://i.ytimg.com/vi/PGOPAenfLaU/maxresdefault.jpg",
             description: "Esta es la descripción",
-            plantilla: 'html3enRaya'
+            plantilla: '<div id="preguntas-wrapper"><div class="preguntaCierre big"><div></div><div></div><div></div></div><div class="preguntaCierre big"><div></div><div></div><div></div></div></div>'
         }
     ]
 }

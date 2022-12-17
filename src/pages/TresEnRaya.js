@@ -15,3 +15,11 @@ export const template = () => `
     </div>
    
 </section>`;
+
+const creacionDeJuego = () => {
+    console.log('entramos en la logica del juego 3 en raya')
+}
+
+export const listeners = () => {
+    creacionDeJuego()
+}

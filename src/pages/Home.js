@@ -1,13 +1,16 @@
 import {data} from '../data/data'
+import { CargandoComponent } from '../components/Cargando';
+
 export const template = () => `
-<section class="home">
-    <h2>${data.juegos.length} juegos online</h2>
-    <div id="formHomeContent">
-      <label for="inputLogin">¿ Como te llamas ?</label>
-      <input id="inputLogin" type="text" />
-      <button id="buttonLogin">Enviar</button>
-    </div>
-</section>
+${CargandoComponent()}
+  <section class="home">
+      <h2>${data.juegos.length} juegos online</h2>
+      <div id="formHomeContent">
+        <label for="inputLogin">¿ Como te llamas ?</label>
+        <input id="inputLogin" type="text" />
+        <button id="buttonLogin">Enviar</button>
+      </div>
+  </section>
 `;
 
 export const homelisteners = () => {
@@ -22,10 +25,11 @@ export const homelisteners = () => {
       data.juegos.forEach(juego => {
         mainTag.querySelector('#juegos').innerHTML += pintaJuego(juego);
       });
-    }else {
+    } else {
       const login = () => {
         if(inputLogin.value.length > 0){
           localStorage.setItem('gameHubUser', `${inputLogin.value}`)
+          homelisteners()
         }
       }
       botonLogin.addEventListener('click', login)
@@ -34,10 +38,10 @@ export const homelisteners = () => {
 
 
 const pintaJuego = (juego) => `
-  <a href="${juego.link}">
-  <figure class="juego">
-  ${juego.plantilla}
-    <figcaption>${juego.title}</figcaption>
-  </figure>
+  <a class="enlaceJuego" href="${juego.link}">
+    <figure class="juego">
+      ${juego.plantilla}
+      <figcaption>${juego.title}</figcaption>
+    </figure>
   </a>
 `

@@ -18,3 +18,11 @@ export const template = () => `
     </div>
    
 </section>`;
+
+const ahorcadoListeners = () => {
+    console.log('entramos en la logica del juego ahorcado')
+}
+
+export const listeners = () => {
+    ahorcadoListeners()
+}

@@ -1,0 +1,18 @@
+section.pokeApi {
+    display: grid;
+    gap:2rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+article.pokemonapi {
+    position: relative;
+}
+article > h3 {
+    position: absolute;
+    top:0;
+    left:0;
+}
+article ul {
+    display: flex;
+    justify-content: space-around;
+}
+
