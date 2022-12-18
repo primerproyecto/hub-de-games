@@ -1,6 +1,7 @@
 import "./pokeApi.css";
 import { PokemonCard } from "../components/PokemonCard";
 import { Buscador } from "../components/Buscador";
+import {FiltrarPorTipo} from "../components/PokemonFiltrarPorTipo"
 
 
 export const template = () => `
@@ -12,6 +13,7 @@ export const template = () => `
         <div class="esfera"></div>
     </div>
     <section id="buscadorPokemon"></section>
+    <section id="filterByType"></section>
     <section class="pokeApi"></section>
     </section>
 `;
@@ -20,7 +22,6 @@ export const template = () => `
 
 const pokeApiListeners = () => {
     const sectionApi = document.querySelector('.pokeApi')
-    console.log('entramos en la lógica del juego pokeapi')
     const POKEAPIURL = "https://pokeapi.co/api/v2/pokemon/";
     const cantidadPokemon = 15;
 
@@ -41,30 +42,57 @@ const pokeApiListeners = () => {
                 
               });
             });
-            Buscador(pokemonList)
-            
+    Buscador(pokemonList)
+    
+    // FILTRAR DESDE LOS POKEMONS
 
-            const Filtrar = (objeto) => {
-                console.log('desde filtrar',objeto)
-                const filtradoPorTipo = (e) => {
-                    if(e.target.type == 'submit') {
-                        console.log(e.target.dataset.type)
-                        console.log(objeto)
-
-                        const filtrados = objeto.filter( item => item.name.toLowerCase() == e.target.dataset.type)
-
-                        
-                    }
-                }
-               
-                
-                sectionApi.addEventListener('click', filtradoPorTipo)
-                
-            }
-            Filtrar(pokemonList)
+    
+    Filtrar(pokemonList)
+    FiltrarPorTipo(pokemonList)
     });
 }
+
+const Filtrar = (objeto) => {
+    const sectionApi = document.querySelector('.pokeApi')
+                
+    const filtradoPorTipo = (e) => {
+        if(e.target.type == 'submit') {
+            sectionApi.innerHTML = '';
+            fetch(`https://pokeapi.co/api/v2/type/${e.target.dataset.type}`)
+                .then(response => response.json())
+                .then(pokemonInfo => {
+
+                    pokemonInfo.pokemon.forEach( item => {
+                        console.log(item)
+                        fetch(item.pokemon.url)
+                            .then(response => response.json())
+                            .then(pokemonInfo2 => {
+                                console.log(pokemonInfo2)
+                                sectionApi.innerHTML += PokemonCard(pokemonInfo2);
+                                
+                            });
+                    })
+
+
+                    
+                    
+                    // Agrega la imagen al documento
+                   // sectionApi.innerHTML += PokemonCard(pokemonInfo);
+                    
+                });
+
+            
+
+            
+        }
+    }
+   
     
+    sectionApi.addEventListener('click', filtradoPorTipo)
+    
+}
+    
+
 export const listeners = (pokemons) => {
     pokeApiListeners()
 }

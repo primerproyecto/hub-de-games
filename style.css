@@ -600,5 +600,22 @@ figure > div:first-child {
 }
 
 .pokemon-loading {
-  border: 3px solid red;
+}
+
+#filterByType {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.pokemonTipoLink {
+  background-color: aliceblue;
+  color: black;
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--spacing);
+  flex:1;
+  text-align: center;
 }

@@ -25,12 +25,10 @@ export const Buscador = (objeto) => {
             
             filtrados.forEach(pokemon => {
                 // Obtiene la dirección URL de la imagen del Pokémon
-                console.log('que es pokemon', pokemon)
                 const pokemonUrl = pokemon.url;
                 fetch(pokemonUrl)
                   .then(response => response.json())
                   .then(pokemonInfo => {
-                    console.log('que es pokemon', pokemonInfo)
                     // Agrega la imagen al documento
                     sectionApi.innerHTML += PokemonCard(pokemonInfo);
                     
@@ -46,5 +44,4 @@ export const Buscador = (objeto) => {
     document.querySelector('section#buscadorPokemon').insertAdjacentElement('beforebegin',pokeapiSearchLabel)
     document.querySelector('section#buscadorPokemon').insertAdjacentElement('beforebegin',pokeapiSearchInput)
     document.querySelector('section#buscadorPokemon').insertAdjacentElement('beforebegin',pokeapiSearchButton)
-    console.log('desde el buscador', objeto)
 }
