@@ -13,37 +13,37 @@
     left:20%;
     margin-left: auto;
     margin-right: auto;
-    height: 74%;
+    height: 90%;
   }
   #ahorcado__cruz {
     position: absolute;
-    left:15%;
-    top:20%;
+    left:12%;
+    top:10%;
     height: calc(var(--spacing)*3);
-    width: 50%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
   }
   #ahorcado__soga {
     position: absolute;
-    width: calc(var(--spacing)*3);
-    top: 20%;
-    left: 60%;
-    height: calc(var(--spacing)*10);
+    width: calc(var(--spacing)*2);
+    top: 10%;
+    left: 80%;
+    height: calc(var(--spacing)*7);
   }
   #ahorcado__cabeza {
     position: absolute;
     width: calc(var(--spacing)*10);
-    top: 30%;
-    left: 55%;
+    top: 20%;
+    left: 69%;
     height: calc(var(--spacing)*10);
     border-radius: 50%;
   }
   #ahorcado__tronco {
     width: calc(var(--spacing)*3);
     top: 40%;
-    left: 60%;
-    height: calc(var(--spacing)*20);
+    left: 80%;
+    height: calc(var(--spacing)*12);
   }
   #ahorcado__brazoIzq {
     width: calc(var(--spacing)*3);
@@ -74,3 +74,18 @@
     transform: rotate(150deg);
   }
   
+  .alphabetWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .alphabetWrapper > a {
+    min-width: 3rem;
+    min-height: 3rem;
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--spacing);
+  }

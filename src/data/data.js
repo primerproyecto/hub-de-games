@@ -43,5 +43,5 @@ export const data = {
             description: "Esta es la descripción",
             plantilla: '<div id="preguntas-wrapper"><div class="preguntaCierre big"><div></div><div></div><div></div></div><div class="preguntaCierre big"><div></div><div></div><div></div></div></div>'
         }
-    ]
+    ],
 }

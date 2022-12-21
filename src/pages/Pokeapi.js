@@ -23,7 +23,7 @@ export const template = () => `
 const pokeApiListeners = () => {
     const sectionApi = document.querySelector('.pokeApi')
     const POKEAPIURL = "https://pokeapi.co/api/v2/pokemon/";
-    const cantidadPokemon = 15;
+    const cantidadPokemon = 150;
 
     fetch(`${POKEAPIURL}?limit=${cantidadPokemon}`)
     .then(response => response.json())
@@ -91,8 +91,6 @@ const Filtrar = (objeto) => {
     sectionApi.addEventListener('click', filtradoPorTipo)
     
 }
-    
-
 export const listeners = (pokemons) => {
     pokeApiListeners()
 }

@@ -1,6 +1,6 @@
 import {data} from '../data/data'
 import { CargandoComponent } from '../components/Cargando';
-
+import { Login } from '../utils/utils';
 export const template = () => `
 ${CargandoComponent()}
   <section class="home">
@@ -21,18 +21,15 @@ export const homelisteners = () => {
     const botonLogin = document.querySelector('#buttonLogin')
 
     if(localStorage.getItem('gameHubUser')){
+      document.querySelector('.pokemon-cargando-wrapper').style.display = 'block'
       mainTag.innerHTML = `<h2>Bienvenido ${localStorage.getItem('gameHubUser')}</h2><section id="juegos"></section>`;
       data.juegos.forEach(juego => {
         mainTag.querySelector('#juegos').innerHTML += pintaJuego(juego);
       });
     } else {
-      const login = () => {
-        if(inputLogin.value.length > 0){
-          localStorage.setItem('gameHubUser', `${inputLogin.value}`)
-          homelisteners()
-        }
-      }
-      botonLogin.addEventListener('click', login)
+      document.querySelector('.pokemon-cargando-wrapper').style.display = 'none'
+      
+      botonLogin.addEventListener('click', Login)
     }
 };
 
