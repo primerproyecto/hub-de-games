@@ -1,17 +1,19 @@
 import {data} from '../data/data'
-import { CargandoComponent } from '../components/Cargando';
 import { Login } from '../utils/utils';
+
+const appnode = document.querySelector('main#app')
 export const template = () => `
-${CargandoComponent()}
+
   <section class="home">
-      <h2>${data.juegos.length} juegos online</h2>
+      
       <div id="formHomeContent">
-        <label for="inputLogin">¿ Como te llamas ?</label>
-        <input id="inputLogin" type="text" />
+        <h2>${data.juegos.length} juegos online</h2>
+        <input id="inputLogin" type="text" placeholder="Cómo te llamas ?" />
         <button id="buttonLogin">Enviar</button>
       </div>
   </section>
 `;
+
 
 export const homelisteners = () => {
 
@@ -19,15 +21,22 @@ export const homelisteners = () => {
     mainTag.innerHTML = template();
     const inputLogin = document.querySelector('#inputLogin')
     const botonLogin = document.querySelector('#buttonLogin')
+    inputLogin.focus()
 
     if(localStorage.getItem('gameHubUser')){
-      document.querySelector('.pokemon-cargando-wrapper').style.display = 'block'
-      mainTag.innerHTML = `<h2>Bienvenido ${localStorage.getItem('gameHubUser')}</h2><section id="juegos"></section>`;
+      mainTag.innerHTML = `<section><h2>Bienvenido ${localStorage.getItem('gameHubUser')} <span
+      class="wave"
+      role="img"
+      aria-label="Saludos"
+    >
+      👋
+    </span></h2><section id="juegos"></section></section>`;
       data.juegos.forEach(juego => {
         mainTag.querySelector('#juegos').innerHTML += pintaJuego(juego);
       });
     } else {
-      document.querySelector('.pokemon-cargando-wrapper').style.display = 'none'
+      
+      //document.querySelector('.pokemon-cargando-wrapper').style.display = 'none'
       
       botonLogin.addEventListener('click', Login)
     }

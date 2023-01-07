@@ -12,35 +12,28 @@ export const data = {
             title: "Poke Api",
             link: "/pokeapi",
             image: "https://i.ytimg.com/vi/yd7_STihkZ4/maxresdefault.jpg",
-            description: "Esta es la descripción",
+            description: `<p>Esta es la descripción del ejercicio Pokeapi. En el que a través de la api https://pokeapi.co/ hacemos varios fectchs para mostrar los pokemons en los que se muestra el tipo que son y nos permite filtrar por cada uno de ellos. También se muestra el la experiencia de cada pokemon.</p> <p>Con un buscador de pokemons y unos botones para todos los tipos de pokemons disponibles</p>`,
             plantilla: '<div id="pokemon-wrapper"><div class="semiesfera top"></div><div class="raya"></div><div class="esfera"></div></div>'
-        },
-        {
-            title: "Memory game",
-            link: "/encuentraparejas",
-            image: "https://i.ytimg.com/vi/CEdHqXeljg8/maxresdefault.jpg",
-            description: "Esta es la descripción",
-            plantilla: '<div id="encuentraParejas-wrapper"><div class="encuentraParejas__card"></div><div class="encuentraParejas__card"></div><div class="encuentraParejas__card"></div><div class="encuentraParejas__card"></div><div class="encuentraParejas__card"></div><div class="encuentraParejas__card"></div><div class="encuentraParejas__card"></div><div class="encuentraParejas__card"></div><div class="encuentraParejas__card"></div><div class="encuentraParejas__card"></div><div class="encuentraParejas__card"></div><div class="encuentraParejas__card"></div><div class="encuentraParejas__card"></div> <div class="encuentraParejas__card"></div><div class="encuentraParejas__card"></div><div class="encuentraParejas__card"></div></div>'
         },
         {
             title: "Whaka topo",
             link: "/whakatopo",
             image: "https://i.ytimg.com/vi/PGOPAenfLaU/maxresdefault.jpg",
             description: "Esta es la descripción",
-            plantilla: '<div id="wakatopo-wrapper"><div class="circulos"><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div></div><div id="gusano"><div></div><div></div></div></div>'
+            plantilla: '<div id="wakatopo-wrapper"><div class="circulos"><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div><div class="circulo"></div></div><div class="mole"><div class="ojo-izquierdo"></div><div class="ojo-derecho"></div></div></div><div></div></div></div>'
         },
         {
             title: "Ahorcado",
             link: "/ahorcado",
             image: "https://i.ytimg.com/vi/PGOPAenfLaU/maxresdefault.jpg",
             description: "Esta es la descripción",
-            plantilla: '<div id="ahorcado-wrapper"><div id="ahorcado__base"></div><div id="ahorcado__mastil"></div><div id="ahorcado__cruz"></div><div id="ahorcado__soga"></div><div id="ahorcado__cabeza"></div><div id="ahorcado__tronco"></div><div id="ahorcado__brazoIzq"></div><div id="ahorcado__brazoDer"></div><div id="ahorcado__piernaIzq"></div><div id="ahorcado__piernaDer"></div></div>'
+            plantilla: '<div id="ahorcado-wrapper"><div id="ahorcado__base"></div><div id="ahorcado__mastil"></div><div id="ahorcado__cruz"></div><div id="ahorcado__soga"></div><div id="ahorcado__cabeza"></div><div id="ahorcado__tronco"></div><div id="ahorcado__brazoIzq"></div><div id="ahorcado__brazoDer"></div><div id="ahorcado__piernas"></div></div>'
         },
         {
-            title: "Pregunas",
+            title: "Preguntas",
             link: "/preguntas",
             image: "https://i.ytimg.com/vi/PGOPAenfLaU/maxresdefault.jpg",
-            description: "Esta es la descripción",
+            description: `<p>Pregunta en inglés generada por el servicio https://opentdb.com/ mediante un fetch.</p>`,
             plantilla: '<div id="preguntas-wrapper"><div class="preguntaCierre big"><div></div><div></div><div></div></div><div class="preguntaCierre big"><div></div><div></div><div></div></div></div>'
         }
     ],

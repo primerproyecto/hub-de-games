@@ -1,0 +1,116 @@
+
+.mole {
+    background-color: hsl(var(--hue) var(--saturation) var(--lightness-10));
+    border-radius: 48% 52% 56% 44% / 91% 88% 12% 9%  ;
+    margin-right:auto;
+    margin-left:auto;
+    width: 90px;
+    height: 90px;
+    position: relative;
+    color: currentColor;
+    z-index: 9;
+    top: 100%;
+    opacity: 0;
+    transition: top 0.3s ease-in, opacity 0.2s ease-in;
+  }
+  .mole::after {
+    background-color: hsl(var(--hue) var(--saturation) var(--lightness-10));;
+    border-radius: 48% 52% 56% 44% / 91% 88% 12% 9%  ;
+    top: 0%;
+    left:3%;
+    margin-right:auto;
+    margin-left:auto;
+    position: absolute;
+    width: 25%;
+    height: 25%;
+    position: absolute;
+    content: '';
+    transform: rotate(306deg);
+  }
+  .mole::before {
+    background-color: hsl(var(--hue) var(--saturation) var(--lightness-10));;
+    border-radius: 48% 52% 56% 44% / 91% 88% 12% 9%  ;
+    top: 0%;
+    right:3%;
+    margin-right:auto;
+    margin-left:auto;
+    position: absolute;
+    width: 25%;
+    height: 25%;
+    position: absolute;
+    content: '';
+    transform: rotate(45deg);
+   
+  }
+
+  .mole .ojo-izquierdo {
+    position: absolute;
+    top: 40px;
+    width: 20px;
+    left: 20px;
+    height: 20px;
+    z-index: 4;
+    background-color: hsl(var(--hue) var(--saturation) 40%);
+    border-radius: 50%;
+  }
+  .mole .ojo-izquierdo::after {
+   content: '';
+   position: absolute;
+   width: 10px;
+   height: 10px;
+   background-color: hsl(var(--hue) var(--saturation) var(--lightness-50));
+   border-radius: 50%;
+   margin: auto;
+   inset: 0px;
+  }
+
+  .mole .ojo-derecho {
+    position: absolute;
+    top: 40px;
+    width: 20px;
+    right: 20px;
+    height: 20px;
+    z-index: 4;
+    background-color: hsl(var(--hue) var(--saturation) 40%);
+    border-radius: 50%;
+  }
+  .mole .ojo-derecho::after {
+   content: '';
+   position: absolute;
+   width: 10px;
+   height: 10px;
+   background-color: hsl(var(--hue) var(--saturation) var(--lightness-50));
+   border-radius: 50%;
+   margin: auto;
+   inset: 0px;
+  }
+.agujero {
+    position: relative;
+    height: min-content;
+    height: 100px;
+    overflow: hidden;
+}
+.agujero::before {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-color: var(--tablerosKolor);
+    border-radius: 50%;
+    inset: 10;
+    margin: auto;
+    transform: rotate3d(0, 1, 0.6, 3.142rad);
+    border-radius: 47% 53% 72% 28% / 33% 58% 42% 67%;
+}
+.agujero.mostrar .mole {
+    top:0;
+    opacity: 1;
+}
+
+#wakatopo-wrapper {
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+}

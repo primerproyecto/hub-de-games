@@ -8,6 +8,5 @@ window.addEventListener("click", (e) => {
     router();
   }
 });
-
 window.addEventListener("popstate", router);
 window.addEventListener("DOMContentLoaded", router);

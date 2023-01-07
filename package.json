@@ -9,9 +9,11 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "sass": "^1.57.1",
     "vite": "^3.2.3"
   },
   "dependencies": {
-    "canvas-confetti": "^1.6.0"
+    "canvas-confetti": "^1.6.0",
+    "feather-icons": "^4.29.0"
   }
 }

@@ -11,3 +11,8 @@ export const Login = () => {
   }
   homelisteners();
 };
+
+
+export const randomTime = (min, max) => {
+  return Math.round(Math.random() * (max - min) + min);
+}

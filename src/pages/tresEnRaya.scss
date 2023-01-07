@@ -1,0 +1,147 @@
+#tresEnRaya {
+    height: 50vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: var(--tablerosKolor);
+    gap: 0.5rem;
+    @for $i from 1 through 9 {
+        div:nth-child(#{$i}) {
+            position: relative;
+        }
+    }
+}
+figure #tresEnRaya {
+    height: 200px;
+    width: 200px;
+    gap: 0.6rem;
+    margin: auto;
+}
+figure #tresEnRaya div:nth-child(5)::after {
+content: '';
+background-color: var(--tablerosKolor);
+height: 80px;
+width: 8px;
+position: absolute;
+inset: 0;
+margin:auto;
+transform: rotate(45deg);
+}
+figure #tresEnRaya div:nth-child(5)::before {
+    content: '';
+background-color: var(--tablerosKolor);
+height: 80px;
+width: 8px;
+position: absolute;
+inset: 0;
+margin:auto;
+transform: rotate(-45deg);
+}
+figure #tresEnRaya div:nth-child(6)::after {
+    content: '';
+    background-color: var(--backgroundKolor);
+    height: 55px;
+    width: 55px;
+    position: absolute;
+    border-radius: 50%;
+    inset: 0;
+    margin:auto;
+    border-radius: 50%;
+    }
+    figure #tresEnRaya div:nth-child(6)::before {
+        
+
+    content: '';
+    background-color: var(--tablerosKolor);
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    border-radius: 50%;
+    inset: 0;
+    margin:auto;
+    }
+
+.cruz::before {
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom: 0px;
+    background-color: white;
+    width: 80px;
+    height: 10px;
+    margin: auto;
+    transform: rotate(45deg);
+}
+.cruz::after {
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom: 0px;
+    background-color: white;
+    width: 80px;
+    height: 10px;
+    margin: auto;
+    transform: rotate(-45deg);
+}
+
+.circle::before {
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom: 0px;
+    background-color: transparent;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: auto;
+    z-index: 2;
+}
+.circle::after {
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom: 0px;
+    background-color: white;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: auto;
+    z-index: 1;
+}
+
+
+.mensajeConResultado {
+    display: none;
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.8);
+    align-items: center;
+    justify-content: center;
+    z-index: 9;
+    flex-direction: row;
+    gap: 2rem;
+    flex-wrap: wrap;
+    h1 {
+       
+    }
+    button {
+
+    }
+}
+.mensajeConResultado.mostrar {
+    display: flex;
+}
+.cuadricula {
+    cursor: pointer;
+    background-color: var(--backgroundKolor);
+}

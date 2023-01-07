@@ -7,23 +7,28 @@
     width: 50%;
   }
   #ahorcado__mastil {
-    position: absolute;
-    bottom:calc(var(--spacing)*3);
+    bottom:0;
     width: calc(var(--spacing)*3);
     left:20%;
-    margin-left: auto;
-    margin-right: auto;
     height: 90%;
   }
   #ahorcado__cruz {
-    position: absolute;
     left:12%;
-    top:10%;
+    bottom:90%;
     height: calc(var(--spacing)*3);
     width: 80%;
-    margin-left: auto;
-    margin-right: auto;
   }
+ figure #ahorcado__cruz {
+  width: 50%;
+ }
+ figure #ahorcado__soga,
+ figure #ahorcado__tronco  {
+  left: 50%;
+ }
+ figure #ahorcado__cabeza{
+  left: 45%;
+ }
+
   #ahorcado__soga {
     position: absolute;
     width: calc(var(--spacing)*2);
@@ -34,44 +39,111 @@
   #ahorcado__cabeza {
     position: absolute;
     width: calc(var(--spacing)*10);
-    top: 20%;
-    left: 69%;
+    top: 98px;
+    left: 285px;
+    height: calc(var(--spacing)*10);
+    border-radius: 50%;
+  }
+  figure #ahorcado__cabeza {
+    position: absolute;
+    width: calc(var(--spacing)*10);
+    top: 50px;
     height: calc(var(--spacing)*10);
     border-radius: 50%;
   }
   #ahorcado__tronco {
     width: calc(var(--spacing)*3);
-    top: 40%;
-    left: 80%;
+    top: 180px;
+    left: 315px;
+    height: 76px;
+    z-index: 1;
+  }
+  figure #ahorcado__tronco {
+    top: 87px;
+    left: 50%;
     height: calc(var(--spacing)*12);
+  }
+  figure #ahorcado__tronco::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: calc(var(--spacing)*3);
+    background-color: var(--tablerosKolor);
+    top:18px;
+    transform: rotate(30deg);
+  }
+  figure #ahorcado__tronco::before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: calc(var(--spacing)*3);
+    background-color: var(--tablerosKolor);
+    top:18px;
+    transform: rotate(-30deg);
+    left: -45px;
   }
   #ahorcado__brazoIzq {
     width: calc(var(--spacing)*3);
-    top: 40%;
-    left: 50%;
+    top: 159px;
+    left: 260px;
     height: calc(var(--spacing)*15);
     transform: rotate(65deg);
+    background-color: hsl(var(--hue) var(--saturation) var(--lightenes));
+    
+  }
+  figure #ahorcado__brazoIzq {
+    width: calc(var(--spacing)*3);
+    top: 86px;
+    left: 169px;
+    height: calc(var(--spacing)*15);
+    transform: rotate(65deg);
+    background-color: var(--tablerosKolor);
+    display: none;
   }
   #ahorcado__brazoDer{
     width: calc(var(--spacing)*3);
-    top: 40%;
-    left: 68%;
+    top: 165px;
+    left: 361px;
+    height: calc(var(--spacing)*15);
+    transform: rotate(122deg);
+  }
+  figure #ahorcado__brazoDer{
+    width: calc(var(--spacing)*3);
+    top: 88px;
+    left: 216px;
     height: calc(var(--spacing)*15);
     transform: rotate(125deg);
+    display: none;
   }
-  #ahorcado__piernaIzq {
-    width: calc(var(--spacing)*3);
-    top: 60%;
-    left: 55%;
-    height: calc(var(--spacing)*15);
-    transform: rotate(37deg);
+  #ahorcado__piernas {
+    bottom: 170px;
+    left: 327px;
   }
-  #ahorcado__piernaDer{
+  figure #ahorcado__piernas {
+    bottom: 176px;
+    left: 52%;
+  }
+  #ahorcado__piernas::before {
+    content: '';
     width: calc(var(--spacing)*3);
-    top: 60%;
-    left: 65%;
-    height: calc(var(--spacing)*15);
-    transform: rotate(150deg);
+    height: calc(var(--spacing)*18);
+    background-color: var(--backgroundKolor);
+    position: absolute;
+    top:0;
+    left: 9px;
+    transform: rotate(341deg);
+    border-radius: 4px;
+  }
+  #ahorcado__piernas::after {
+    content: '';
+    width: calc(var(--spacing)*3);
+    height: calc(var(--spacing)*18);
+    background-color: currentColor;
+    position: absolute;
+    top:0;
+    right: 7px;
+    transform: rotate(17deg);
+    border-radius: 4px;
   }
   
   .alphabetWrapper {
@@ -83,9 +155,51 @@
   .alphabetWrapper > a {
     min-width: 3rem;
     min-height: 3rem;
-    border: 1px solid red;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: var(--spacing);
+  }
+
+  .ahorcadoWrapper {
+    display: flex;
+    flex: 1;
+  }
+  @media ( max-width: 900px) {
+    .ahorcadoWrapper {
+      flex-direction : column;
+    }
+    
+  }
+  section.ahorcado #ahorcado-wrapper {
+    --spacing: 8px;
+    width: 400px;
+    min-height: 400px;
+    flex: initial;
+    margin: auto;
+  }
+  section.ahorcado #ahorcado-wrapper > div  {
+    background-color: var(--backgroundKolor);
+    outline: 2px solid;
+    color: hsl(var(--hue) var(--saturation) 78%);
+  }
+  #ahorcado__piernas::before,
+  #ahorcado__piernas::after  {
+    background-color: var(--tablerosKolor);
+  }
+  #ahorcado__piernaIzq {
+    width: calc(var(--spacing)*3);
+    top: 247px;
+    left: 337px;
+    height: calc(var(--spacing)*15);
+    transform: rotate(159deg);
+    position: absolute;
+  }
+  #ahorcado__piernaDer {
+    width: calc(var(--spacing)*3);
+    top: 247px;
+    left: 292px;
+    height: calc(var(--spacing)*15);
+    transform: rotate(22deg);
+    position: absolute;
   }
