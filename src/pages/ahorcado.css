@@ -173,7 +173,7 @@
   }
   section.ahorcado #ahorcado-wrapper {
     --spacing: 8px;
-    width: 400px;
+    min-width: 400px;
     min-height: 400px;
     flex: initial;
     margin: auto;

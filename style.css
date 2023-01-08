@@ -152,11 +152,7 @@ ul {
   margin-right: auto;
 }
 
-@media (max-width: 800px) {
-  nav > a svg + span {
-    display: none;
-  }
-}
+
 
 a {
   font-weight: 500;
@@ -1059,4 +1055,39 @@ footer a.efectoEnlace span[aria-hidden],
 }
 p{
   font-size: 1.2rem;
+}
+/* @media (max-width: 800px){
+  .ocultarEnMovil {
+    display: none;
+  }
+} */
+
+@media (max-width: 800px) {
+  nav > a svg + span {
+    display: none;
+  }
+  a span.ocultarEnMovil {
+    display: none ;
+  }
+  #respuestas {
+    padding-left: unset;
+  }
+  
+  #buscadorPokemon {
+    flex-direction: column;
+  }
+  section.ahorcado #ahorcado-wrapper {
+    transform: scale(0.6);
+  }
+  #resultado {
+    font-size: 2rem;
+    padding: 0;
+  }
+  section#juegos {
+    gap: 6rem;
+    padding: calc(var(--spacing) * 12);
+  }
+  #pregunta {
+    line-height: 1.2;
+  }
 }
